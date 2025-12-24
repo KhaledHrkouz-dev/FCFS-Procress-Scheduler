@@ -13,11 +13,12 @@ The program prints a table with all the tasks’ information and calculates **av
 
 ## Author
 
-- **Khaled Hrkouz** – main developer (wrote all the code)
+- **Khaled Hrkouz** – main developer
 
 ## Collaborator
 
 - **@ Nesisen Mohamd Sedik** – added as collaborator for project contribution
 
 ---
+
 
