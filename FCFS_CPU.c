@@ -29,6 +29,11 @@ printf(" Hello\n ");
     // Ask user for number of tasks
     printf("Enter number of tasks (max 10): ");
     scanf("%d", &numTasks);
+if (numTasks <= 0 || numTasks > 10) {
+    printf("Invalid number of tasks (must be between 1 and 10).\n");
+    return 0;
+}
+printf("Note: Enter tasks in increasing order of arrival time.\n");
 
     // Get arrival time and burst time for each task
     for(i = 0; i < numTasks; i++) {
@@ -40,6 +45,8 @@ printf(" Hello\n ");
     }
 
     // Calculate completion times
+    // FCFS scheduling assumes tasks are already sorted by arrival time
+
     finish[0] = arrival[0] + burst[0]; // first task finishes at arrival + burst
 
     for(i = 1; i < numTasks; i++) {
@@ -63,12 +70,15 @@ printf(" Hello\n ");
 
     // Display the results in a table
     printf("\n============================================================\n");
-    printf("Task  Arrival  Burst  Finish  Turnaround  Waiting\n");
+    printf("%-5s %-8s %-6s %-7s %-11s %-7s\n",
+       "Task", "Arrival", "Burst", "Finish", "Turnaround", "Waiting");
+
     printf("============================================================\n");
 
     for(i = 0; i < numTasks; i++) {
-        printf("%d\t%d\t%d\t%d\t%d\t%d\n",
-               i + 1, arrival[i], burst[i], finish[i], turnaround[i], wait[i]);
+        printf("%-5d %-8d %-6d %-7d %-11d %-7d\n",
+       i + 1, arrival[i], burst[i], finish[i], turnaround[i], wait[i]);
+
     }
 
     printf("============================================================\n");
@@ -77,3 +87,4 @@ printf(" Hello\n ");
 
     return 0;
 }
+
