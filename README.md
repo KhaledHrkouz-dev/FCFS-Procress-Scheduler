@@ -13,13 +13,16 @@ The program prints a table with all the tasks’ information and calculates **av
 
 ## Author
 
-- **Khaled Harkouz** – 
+- **Khaled Harkouz** –
+- KhaledHrkouz-dev (user name )
 
 ## Author 
 
 - **@ Nessissen Mohamed Sedik** -
+- silvabarca-
 
 ---
+
 
 
 
